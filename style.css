@@ -240,3 +240,8 @@ nav .container a {
     right: 5px;
     border-radius: 4px;
 }
+
+/* mobile view */
+@media screen and (max-width: ){
+    
+}
