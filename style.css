@@ -85,7 +85,13 @@ nav .container a {
     top: 0;
     left: 0;
     object-fit: cover;
-    background: linear-gradient(to right, var(--fourth-color),var(--first-color),var(--third-color),var(--second-color));
+    background: linear-gradient(
+            to right, 
+            var(--fourth-color),
+            var(--first-color),
+            var(--third-color),
+            var(--second-color)
+        );
     mix-blend-mode: overlay;
     z-index: -1;
 }
@@ -121,7 +127,6 @@ nav .container a {
 .service-card .service-card-body:hover{
     background-color: var(--sixth-color);
     transform: scale(1.02);
-    
 }
 
 /* plan */
