@@ -247,21 +247,25 @@ nav .container a {
 }
 
 /* mobile view */
-@media (max-width: 500px){
+@media only screen and (max-width: 300px) {
+    /* .container {
+        border: 2px solid #fd7e14;
+        width: 90%;
+    } */
     .navbar .container {
-        /* border: 2px solid black; */
-        width: 100%;
+        border: 2px solid black;
+        width: 90%;
     }
     .navbar-brand {
-        /* border: 2px solid rgb(0, 0, 0); */
+        border: 2px solid rgb(0, 0, 0);
         color: var(--sixth-color);
-        font-size: 40px !important;
+        font-size: 40px;
         letter-spacing: 3px;
         margin: 0px 0px;
         position: relative;
     }
     .navbar-toggler {
-        /* border: 2px solid black; */
+        border: 2px solid black;
         font-size: 36px;
         padding: 0px 20px;
         border: none;
@@ -300,5 +304,14 @@ nav .container a {
         height: 56px;
         display: block;
         margin: 20px auto 0px;
+    }
+}
+@media(max-width: 600px) {
+    body {
+        border: 2px solid slateblue;
+        width: 50%;
+    }
+    .container {
+        border: 2px solid hotpink;
     }
 }
