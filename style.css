@@ -247,6 +247,39 @@ nav .container a {
 }
 
 /* mobile view */
-@media screen and (max-width: ){
-    
+@media only screen and (min-width: 500px){
+    .container {
+        /* border: 2px solid green; */
+        min-width: 100%;
+    }
+    .navbar-brand {
+        /* border: 2px solid rgb(0, 0, 0); */
+        color: #f0f3f4;
+        font-size: 40px !important;
+        letter-spacing: 3px;
+        margin: 0px 20px;
+    }
+    .navbar-toggler {
+        /* border: 2px solid black; */
+        font-size: 36px;
+        padding: 0px 20px;
+    }
+    #navbarNav {
+        border: 2px solid wheat;
+        margin: 0px 30px;
+    }
+    #navbarNav ul li
+
+    #homePara {
+        /* border: 2px solid beige; */
+        text-indent: 90px;
+        margin: 4px auto;
+        font-size: 30px !important;
+        text-align: justify;
+    }
+    #joinUsBtn {
+        /* border: 2px solid rgb(219, 39, 39); */
+        font-size: 24px ;
+        letter-spacing: 2px;
+    }
 }
