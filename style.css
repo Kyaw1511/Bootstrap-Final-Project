@@ -246,27 +246,29 @@ nav .container a {
     border-radius: 4px;
 }
 
+
 /* mobile view */
-@media only screen and (max-width: 300px) {
+@media (max-width: 600px) {
     /* .container {
         border: 2px solid #fd7e14;
-        width: 90%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
     } */
     .navbar .container {
         border: 2px solid black;
-        width: 90%;
+        width: 100%;
     }
     .navbar-brand {
         border: 2px solid rgb(0, 0, 0);
         color: var(--sixth-color);
-        font-size: 40px;
+        font-size: 20px;
         letter-spacing: 3px;
         margin: 0px 0px;
-        position: relative;
     }
     .navbar-toggler {
         border: 2px solid black;
-        font-size: 36px;
+        font-size: 20px;
         padding: 0px 20px;
         border: none;
     }
@@ -277,24 +279,35 @@ nav .container a {
     }
     #navbarNav ul li a {
         /* border: 2px solid red; */
-        font-size: 30px;
+        font-size: 20px;
         letter-spacing: 2px;
         color: var(--sixth-color);
     }
     #header {
         border: 2px solid green;
-        width: 100%;
+        position: relative;
+        /* width: 100% !important; */
+        margin: 0 !important;
+        padding: 0 !important;
     }
     #header .container {
-        /* border: 2px solid yellow; */
-        max-width: 100%;
+        border: 2px solid yellow;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    #header .container h1 {
+        font-size: 40px !important;
+        
+    }
+    #header .container h3 {
+        font-size: 30px !important;
     }
     #homePara {
-        /* border: 2px solid beige; */
-        text-indent: 90px;
+        border: 2px solid beige;
+        text-indent: 50px;
         margin: 4px auto;
-        font-size: 30px;
-        text-align: justify;
+        font-size: 20px;
     }
     #joinUsBtn {
         /* border: 2px solid rgb(219, 39, 39); */
@@ -304,14 +317,5 @@ nav .container a {
         height: 56px;
         display: block;
         margin: 20px auto 0px;
-    }
-}
-@media(max-width: 600px) {
-    body {
-        border: 2px solid slateblue;
-        width: 50%;
-    }
-    .container {
-        border: 2px solid hotpink;
     }
 }
