@@ -43,6 +43,9 @@
     line-height: 1.4;
     /* border: 2px solid goldenrod; */
 }
+/* .seeMorePara {
+    display: none;
+} */
 
 /* The all body */
 body {
@@ -325,4 +328,8 @@ nav .container a {
         display: block;
         margin: 20px auto 0px !important;
     }
+    .active {
+        display: none;
+    }
+    
 }
