@@ -21,6 +21,34 @@ else {
 
 // function for aboutImgs;
 function aboutImages() {
+    // for (let data of dataAboutimages) {
+    //     let dataImage = `${data.image}`;
+    //     aboutImgs.src = dataImage;
+    //     console.log("images: " + data.image);
+    // }
+
+    // for (let x = 0; x < dataAboutimages.length; x++) {
+    //     const element = '<img src="' + dataAboutimages[0] + '">'
+    //     aboutImgs.innerHTML += element;
+    // }
+    
+    for (let pic of dataAboutimages) {
+        const htmlImg = document.createElement("div");
+        htmlImg.className = "aboutImg";
+        htmlImg.innerHTML = `
+            <div>
+                <img 
+                    src="${pic.image}" 
+                    alt="gym2" 
+                    class="img-fluid rounded-4 aboutImg"
+                >
+            </div>
+        `;
+        aboutImgs.appendChild(htmlImg);
+        
+    }
+    console.log(aboutImgs);
+    // aboutImgs.src += dataImage;
     // aboutImgs.src = "images/gym25.jpeg";
 
     console.log("hello");
@@ -33,23 +61,46 @@ seeMoreAbout.addEventListener("click", seeMoreAboutPara);
 // addEventListen for aboutImg;
 aboutImgs.addEventListener("click", aboutImages);
 
-const dataAboutimages = {
-    "items" : [
-        {
-            "id": 0,
-            "title": "image_1",
-            "src": "images/gym23.jpeg"
-        },
-        {
-            "id": 1,
-            "title": "image_1",
-            "src": "images/gym25.jpeg"
-        },
-        {
-            "id": 2,
-            "title": "image_2",
-            "src": "images/gym26.jpeg"
-        },
+const dataAboutimages = [
+    {
+        id: "0",
+        name: "gym_23",
+        image: "images/gym23.jpeg"
+    },
+    {
+        id: "0",
+        name: "gym_23",
+        image: "images/gym25.jpeg"
+    },
+    {
+        id: "0",
+        name: "gym_23",
+        image: "images/gym26.jpeg"
+    },
+    {
+        id: "0",
+        name: "gym_23",
+        image: "images/gym27.jpeg"
+    },
+]
+let text = "";
+// for (let data of dataAboutimages) {
+//     for (const key in data) {
+//         text += data[key];
+        
+//         console.log(key + ": " + data[key]);
+//     }
+// }
 
-    ]
-}
+// for (let data of dataAboutimages) {
+//     function aboutImages() {
+//         aboutImgs.src = `image; ${data.image}`;
+//     }
+
+//     console.log("image: " + data.image);
+// }
+// console.log(text);
+
+console.log(dataAboutimages);
+console.log(dataAboutimages[1].image)
+
