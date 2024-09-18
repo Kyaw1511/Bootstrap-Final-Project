@@ -27,26 +27,27 @@ function aboutImages() {
     //     console.log("images: " + data.image);
     // }
 
-    // for (let x = 0; x < dataAboutimages.length; x++) {
-    //     const element = '<img src="' + dataAboutimages[0] + '">'
-    //     aboutImgs.innerHTML += element;
-    // }
-    
-    for (let pic of dataAboutimages) {
-        const htmlImg = document.createElement("div");
-        htmlImg.className = "aboutImg";
-        htmlImg.innerHTML = `
-            <div>
-                <img 
-                    src="${pic.image}" 
-                    alt="gym2" 
-                    class="img-fluid rounded-4 aboutImg"
-                >
-            </div>
-        `;
-        aboutImgs.appendChild(htmlImg);
-        
+    for (let x = 0; x < dataAboutimages.length; x++) {
+        const element = '<img src="' + dataAboutimages[0] + '">'
+        aboutImgs.innerHTML += element;
     }
+    
+    // for (let pic of dataAboutimages) {
+    //     const htmlImg = document.createElement("img");
+    //     htmlImg.className = "aboutImg";
+    //     htmlImg.innerHTML = `
+    //         <img 
+    //             src="${pic.image}" 
+    //             alt="gym2" 
+    //             class="img-fluid rounded-4 aboutImg"
+    //         >
+    //     `;
+    //     aboutImgs.appendChild(htmlImg);
+        
+    // }
+    // for (let pic of dataAboutimages) {
+    //     aboutImgs.src = `${pic.image}`
+    // }
     console.log(aboutImgs);
     // aboutImgs.src += dataImage;
     // aboutImgs.src = "images/gym25.jpeg";
@@ -83,6 +84,7 @@ const dataAboutimages = [
         image: "images/gym27.jpeg"
     },
 ]
+
 let text = "";
 // for (let data of dataAboutimages) {
 //     for (const key in data) {
