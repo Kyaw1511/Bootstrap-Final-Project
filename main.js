@@ -42,5 +42,33 @@ let dataAboutimages = [
     "images/gym2.jpeg"
 ];
 
+let offerCategories = [
+    {
+        "title": "testing1",
+        "para": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore mollitia, deleniti consectetur, ut quaerat culpa optio fugit quas natus eligendi ullam soluta.",
+        "images": "images/gym26.jpeg"
+    },
+    {
+        "title": "testing2",
+        "para": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore mollitia, deleniti consectetur, ut quaerat culpa optio fugit quas natus eligendi ullam soluta.",
+        "images": "images/gym26.jpeg"
+    },
+    {
+        "title": "testing3",
+        "para": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore mollitia, deleniti consectetur, ut quaerat culpa optio fugit quas natus eligendi ullam soluta.",
+        "images": "images/gym26.jpeg"
+    },
+    {
+        "title": "testing4",
+        "para": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore mollitia, deleniti consectetur, ut quaerat culpa optio fugit quas natus eligendi ullam soluta.",
+        "images": "images/gym26.jpeg"
+    },
+    {
+        "title": "testing5",
+        "para": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore mollitia, deleniti consectetur, ut quaerat culpa optio fugit quas natus eligendi ullam soluta.",
+        "images": "images/gym26.jpeg"
+    }
+]
+
 console.log(dataAboutimages);
 
