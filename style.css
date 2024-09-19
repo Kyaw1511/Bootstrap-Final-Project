@@ -98,6 +98,12 @@ nav .container a {
     mix-blend-mode: overlay;
     z-index: -1;
 }
+.aboutImg {
+    border: 2px solid gold;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
 
 /* Services */
 .main-img {
