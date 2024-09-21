@@ -8,49 +8,6 @@ const serviceRight = document.querySelector("#service-right");
 const screenLogX = window.innerWidth;
 let currentIndex = 0;
 
-// function for seeMoreAboutPara;
-function seeMoreAboutPara() {
-    aboutPara.classList.toggle("active");
-    console.log("aboutPara");
-}
-
-// function for aboutImgs;
-function aboutImages() {
-    currentIndex = (currentIndex + 1) % dataAboutimages.length; 
-    aboutImgs.src = dataAboutimages[currentIndex]; 
-
-    console.log("hello");
-}
-
-// function for serviceRightDetails;
-// function serviceRightDetails() {
-//     offerCategories.forEach((item) => {
-//         console.log(item.title, item.images);
-//     })
-//     console.log("serviceRightDetails Function");
-// }
-
-
-
-serviceColoumn.style.border = "2px solid green";
-serviceColoumn.style.height = "1000px";
-
-// mobile site version
-if(screenLogX < 440) {
-    seeMoreAbout.style.display = "block";
-    console.log("hide");
-}
-else {
-    seeMoreAbout.style.display = "none";
-}
-
-// addEventListener for seeMore;
-seeMoreAbout.addEventListener("click", seeMoreAboutPara);
-// addEventListen for aboutImg;
-aboutImgs.addEventListener("click", aboutImages);
-// addEventListen for serviceRight;
-// serviceRight.addEventListener("click", serviceRightDetails);
-
 let dataAboutimages = [
     "images/gym26.jpeg",
     "images/gym27.jpeg",
@@ -83,23 +40,50 @@ const offerCategories = [
     {
         "title": "Q & A section",
         "para": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore mollitia, deleniti consectetur, ut quaerat culpa optio fugit quas natus eligendi ullam soluta.",
-        "images": "images/gym35.jpeg"
+        "images": "images/gym29.jpg"
     }
-]
+];
+
+// function for seeMoreAboutPara;
+function seeMoreAboutPara() {
+    aboutPara.classList.toggle("active");
+    console.log("aboutPara");
+}
+
+// function for aboutImgs;
+function aboutImages() {
+    currentIndex = (currentIndex + 1) % dataAboutimages.length; 
+    aboutImgs.src = dataAboutimages[currentIndex]; 
+
+    console.log("hello");
+}
+
+// mobile site version
+if(screenLogX < 440) {
+    seeMoreAbout.style.display = "block";
+    console.log("hide");
+}
+else {
+    seeMoreAbout.style.display = "none";
+}
+
 offerCategories.forEach((item) => {
     // serviceColoumn.innerHTML += `${item.title} <br>`;
     // serviceColoumn.textContent += `${item.para} <br>`;
     const test = document.createElement("div");
-    test.className = "card";
+    // test.className = "cardTest";
     test.innerHTML = `
         <div 
             id="service-right"
             class="card service-card overflow-hidden bg-transparent p-2 list-group-flush" 
             style="border: none;"
         >
-            <div class="row align-items-center service-card-body rounded-3">
+            <div 
+                class="row align-items-center service-card-body rounded-3"
+            >
                 <div 
-                    class="col-md-7 text-white">
+                    class="col-md-7 text-white"
+                >
                     <h5 style="text-align: center;">
                         ${item.title}
                     </h5>
@@ -124,6 +108,13 @@ offerCategories.forEach((item) => {
     console.log(item.title, item.images);
 })
 
+// serviceColoumn.style.border = "2px solid green";
+serviceColoumn.style.height = "536px";
+
+// addEventListener for seeMore;
+seeMoreAbout.addEventListener("click", seeMoreAboutPara);
+// addEventListen for aboutImg;
+aboutImgs.addEventListener("click", aboutImages);
 
 console.log(dataAboutimages);
 
