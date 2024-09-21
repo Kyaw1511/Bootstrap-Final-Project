@@ -3,7 +3,6 @@ const seeMoreAbout = document.querySelector(".seeMorePara");
 const aboutPara = document.querySelector(".aboutPara2");
 const aboutImgs = document.querySelector(".aboutImg");
 const serviceColoumn = document.querySelector("#service-right-coloumn");
-const serviceRight = document.querySelector("#service-right");
 
 const screenLogX = window.innerWidth;
 let currentIndex = 0;
@@ -43,6 +42,88 @@ const offerCategories = [
         "images": "images/gym29.jpg"
     }
 ];
+
+const priceCards = [
+    {
+        "exchange": "$",
+        "price" : "15",
+        "type": "day",
+        "category": "15 day Trainning",
+        "description": [
+            "Lorem ipsum dolor sit amet.",
+            "Lorem ipsum dolor sit amet.",
+            "Lorem ipsum dolor sit amet.",
+            "Lorem ipsum dolor sit amet.",
+            "Lorem ipsum dolor sit amet.",
+        ]
+    },
+    {
+        "exchange": "$",
+        "price" : "27",
+        "type": "month",
+        "category": "One month Trainning",
+        "description": [
+            "Lorem ipsum dolor sit amet.",
+            "Lorem ipsum dolor sit amet.",
+            "Lorem ipsum dolor sit amet.",
+            "Lorem ipsum dolor sit amet.",
+            "Lorem ipsum dolor sit amet.",
+        ]
+    },
+    {
+        "exchange": "$",
+        "price" : "35",
+        "type": "3-month",
+        "category": "3 month plan Trainning",
+        "description": [
+            "Lorem ipsum dolor sit amet.",
+            "Lorem ipsum dolor sit amet.",
+            "Lorem ipsum dolor sit amet.",
+            "Lorem ipsum dolor sit amet.",
+            "Lorem ipsum dolor sit amet.",
+        ]
+    },
+    {
+        "exchange": "$",
+        "price" : "65",
+        "type": "6-month",
+        "category": "6 month plan Trainning",
+        "description": [
+            "Lorem ipsum dolor sit amet.",
+            "Lorem ipsum dolor sit amet.",
+            "Lorem ipsum dolor sit amet.",
+            "Lorem ipsum dolor sit amet.",
+            "Lorem ipsum dolor sit amet.",
+        ]
+    },
+    {
+        "exchange": "$",
+        "price" : "120",
+        "type": "day",
+        "category": "1 year plan Trainning",
+        "description": [
+            "Lorem ipsum dolor sit amet.",
+            "Lorem ipsum dolor sit amet.",
+            "Lorem ipsum dolor sit amet.",
+            "Lorem ipsum dolor sit amet.",
+            "Lorem ipsum dolor sit amet.",
+        ]
+    },
+    {
+        "exchange": "$",
+        "price" : "160",
+        "type": "day",
+        "category": "15 day Trainning",
+        "description": [
+            "Lorem ipsum dolor sit amet.",
+            "Lorem ipsum dolor sit amet.",
+            "Lorem ipsum dolor sit amet.",
+            "Lorem ipsum dolor sit amet.",
+            "Lorem ipsum dolor sit amet.",
+        ]
+    },
+
+]
 
 // function for seeMoreAboutPara;
 function seeMoreAboutPara() {
