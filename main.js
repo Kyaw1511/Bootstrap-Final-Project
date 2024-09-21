@@ -23,10 +23,14 @@ function aboutImages() {
 }
 
 // function for serviceRightDetails;
-function serviceRightDetails() {
-    
-    console.log("serviceRightDetails Function");
-}
+// function serviceRightDetails() {
+//     offerCategories.forEach((item) => {
+//         console.log(item.title, item.images);
+//     })
+//     console.log("serviceRightDetails Function");
+// }
+
+
 
 serviceColoumn.style.border = "2px solid green";
 serviceColoumn.style.height = "1000px";
@@ -45,7 +49,7 @@ seeMoreAbout.addEventListener("click", seeMoreAboutPara);
 // addEventListen for aboutImg;
 aboutImgs.addEventListener("click", aboutImages);
 // addEventListen for serviceRight;
-serviceRight.addEventListener("click", serviceRightDetails);
+// serviceRight.addEventListener("click", serviceRightDetails);
 
 let dataAboutimages = [
     "images/gym26.jpeg",
@@ -55,7 +59,7 @@ let dataAboutimages = [
     "images/gym2.jpeg"
 ];
 
-let offerCategories = [
+const offerCategories = [
     {
         "title": "Retail Merchandise",
         "para": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore mollitia, deleniti consectetur, ut quaerat culpa optio fugit quas natus eligendi ullam soluta.",
@@ -82,6 +86,44 @@ let offerCategories = [
         "images": "images/gym35.jpeg"
     }
 ]
+offerCategories.forEach((item) => {
+    // serviceColoumn.innerHTML += `${item.title} <br>`;
+    // serviceColoumn.textContent += `${item.para} <br>`;
+    const test = document.createElement("div");
+    test.className = "card";
+    test.innerHTML = `
+        <div 
+            id="service-right"
+            class="card service-card overflow-hidden bg-transparent p-2 list-group-flush" 
+            style="border: none;"
+        >
+            <div class="row align-items-center service-card-body rounded-3">
+                <div 
+                    class="col-md-7 text-white">
+                    <h5 style="text-align: center;">
+                        ${item.title}
+                    </h5>
+                    <p style="text-align: justify;">
+                        ${item.para}
+                    </p>
+                </div>  
+                <div 
+                    class="col-md-5" 
+                    style="text-align: center;"
+                >
+                    <img 
+                        src="${item.images}" 
+                        alt="gym25" 
+                        class="border border-2 border-warning"
+                    >
+                </div>
+            </div>
+        </div>
+    `;
+    serviceColoumn.appendChild(test);
+    console.log(item.title, item.images);
+})
+
 
 console.log(dataAboutimages);
 
