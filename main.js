@@ -3,6 +3,7 @@ const seeMoreAbout = document.querySelector(".seeMorePara");
 const aboutPara = document.querySelector(".aboutPara2");
 const aboutImgs = document.querySelector(".aboutImg");
 const serviceColoumn = document.querySelector("#service-right-coloumn");
+const pricePlan = document.querySelector(".price-plan");
 
 const screenLogX = window.innerWidth;
 let currentIndex = 0;
@@ -113,7 +114,7 @@ const priceCards = [
         "exchange": "$",
         "price" : "160",
         "type": "day",
-        "category": "15 day Trainning",
+        "category": "1.6 year Trainning",
         "description": [
             "Lorem ipsum dolor sit amet.",
             "Lorem ipsum dolor sit amet.",
@@ -122,8 +123,8 @@ const priceCards = [
             "Lorem ipsum dolor sit amet.",
         ]
     },
-
 ]
+
 
 // function for seeMoreAboutPara;
 function seeMoreAboutPara() {
@@ -148,12 +149,13 @@ else {
     seeMoreAbout.style.display = "none";
 }
 
+// service offer 
 offerCategories.forEach((item) => {
     // serviceColoumn.innerHTML += `${item.title} <br>`;
     // serviceColoumn.textContent += `${item.para} <br>`;
-    const test = document.createElement("div");
+    const service = document.createElement("div");
     // test.className = "cardTest";
-    test.innerHTML = `
+    service.innerHTML = `
         <div 
             id="service-right"
             class="card service-card overflow-hidden bg-transparent p-2 list-group-flush" 
@@ -185,9 +187,43 @@ offerCategories.forEach((item) => {
             </div>
         </div>
     `;
-    serviceColoumn.appendChild(test);
+    serviceColoumn.appendChild(service);
     console.log(item.title, item.images);
 })
+
+// pricing table
+priceCards.forEach((prices) => {
+    // pricePlan.innerHTML = `${prices.type}`;
+    const price = document.createElement("div");
+    price.innerHTML = `
+        <div 
+            class="card text-center bg-dark border-0 rounded-4">
+            <div class="card-header text-light pt-5">
+                <h4>
+                    ${prices.exchange}
+                    <span class="fs-1">${prices.price}</span>
+                    <span>/${prices.type}</span>
+                </h4>
+            </div>
+            <div 
+                class="alert bg-warning rounded-0 fw-bold fs-5 tex" 
+                style="letter-spacing: 3px;"
+            >
+                ${prices.category}
+            </div>
+            <div class="card-body">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item bg-transparent text-light my-2 border-bottom" >
+                        ${prices.description}       
+                    </li>      
+                </ul>
+            </div>
+        </div>
+    `;
+    pricePlan.appendChild(price);
+    // console.log(price);
+})
+
 
 // serviceColoumn.style.border = "2px solid green";
 serviceColoumn.style.height = "536px";
@@ -198,4 +234,6 @@ seeMoreAbout.addEventListener("click", seeMoreAboutPara);
 aboutImgs.addEventListener("click", aboutImages);
 
 console.log(dataAboutimages);
+// console.log(priceCards)
+// console.log(priceCards[1].type);
 
