@@ -144,6 +144,10 @@ nav .container a {
 }
 
 /* plan */
+.price-plan {
+    border: 2px solid green;
+    display: inline-block;
+}
 .plan-2 {
     position: relative;
     overflow: hidden;

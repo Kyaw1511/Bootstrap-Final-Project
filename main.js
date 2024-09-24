@@ -46,11 +46,11 @@ const offerCategories = [
 
 const priceCards = [
     {
-        "exchange": "$",
-        "price" : "15",
-        "type": "day",
-        "category": "15 day Trainning",
-        "description": [
+        exchange: "$",
+        price : "15",
+        type: "day",
+        category: "15 day Trainning",
+        description: [
             "Lorem ipsum dolor sit amet.",
             "Lorem ipsum dolor sit amet.",
             "Lorem ipsum dolor sit amet.",
@@ -59,70 +59,74 @@ const priceCards = [
         ]
     },
     {
-        "exchange": "$",
-        "price" : "27",
-        "type": "month",
-        "category": "One month Trainning",
-        "description": [
+        exchange: "$",
+        price : "27",
+        type: "month",
+        category: "One month Trainning",
+        description: [
             "Lorem ipsum dolor sit amet.",
             "Lorem ipsum dolor sit amet.",
             "Lorem ipsum dolor sit amet.",
             "Lorem ipsum dolor sit amet.",
             "Lorem ipsum dolor sit amet.",
+            
         ]
     },
     {
-        "exchange": "$",
-        "price" : "35",
-        "type": "3-month",
-        "category": "3 month plan Trainning",
-        "description": [
+        exchange: "$",
+        price : "35",
+        type: "3-month",
+        category: "3 month plan Trainning",
+        description: [
             "Lorem ipsum dolor sit amet.",
             "Lorem ipsum dolor sit amet.",
             "Lorem ipsum dolor sit amet.",
             "Lorem ipsum dolor sit amet.",
             "Lorem ipsum dolor sit amet.",
+            
         ]
     },
-    {
-        "exchange": "$",
-        "price" : "65",
-        "type": "6-month",
-        "category": "6 month plan Trainning",
-        "description": [
-            "Lorem ipsum dolor sit amet.",
-            "Lorem ipsum dolor sit amet.",
-            "Lorem ipsum dolor sit amet.",
-            "Lorem ipsum dolor sit amet.",
-            "Lorem ipsum dolor sit amet.",
-        ]
-    },
-    {
-        "exchange": "$",
-        "price" : "120",
-        "type": "day",
-        "category": "1 year plan Trainning",
-        "description": [
-            "Lorem ipsum dolor sit amet.",
-            "Lorem ipsum dolor sit amet.",
-            "Lorem ipsum dolor sit amet.",
-            "Lorem ipsum dolor sit amet.",
-            "Lorem ipsum dolor sit amet.",
-        ]
-    },
-    {
-        "exchange": "$",
-        "price" : "160",
-        "type": "day",
-        "category": "1.6 year Trainning",
-        "description": [
-            "Lorem ipsum dolor sit amet.",
-            "Lorem ipsum dolor sit amet.",
-            "Lorem ipsum dolor sit amet.",
-            "Lorem ipsum dolor sit amet.",
-            "Lorem ipsum dolor sit amet.",
-        ]
-    },
+    // {
+    //     exchange: "$",
+    //     price : "65",
+    //     type: "6-month",
+    //     category: "6 month plan Trainning",
+    //     description: [
+    //         "Lorem ipsum dolor sit amet.",
+    //         "Lorem ipsum dolor sit amet.",
+    //         "Lorem ipsum dolor sit amet.",
+    //         "Lorem ipsum dolor sit amet.",
+    //         "Lorem ipsum dolor sit amet.",
+            
+    //     ]
+    // },
+    // {
+    //     exchange: "$",
+    //     price : "120",
+    //     type: "day",
+    //     category: "1 year plan Trainning",
+    //     description: [
+    //         "Lorem ipsum dolor sit amet.",
+    //         "Lorem ipsum dolor sit amet.",
+    //         "Lorem ipsum dolor sit amet.",
+    //         "Lorem ipsum dolor sit amet.",
+    //         "Lorem ipsum dolor sit amet.",
+            
+    //     ]
+    // },
+    // {
+    //     exchange: "$",
+    //     price : "160",
+    //     type: "day",
+    //     category: "1.6 year Trainning",
+    //     description: [
+    //        "Lorem ipsum dolor sit amet.",
+    //         "Lorem ipsum dolor sit amet.",
+    //         "Lorem ipsum dolor sit amet.",
+    //         "Lorem ipsum dolor sit amet.",
+    //         "Lorem ipsum dolor sit amet.",
+    //     ]
+    // },
 ]
 
 
@@ -196,29 +200,43 @@ priceCards.forEach((prices) => {
     // pricePlan.innerHTML = `${prices.type}`;
     const price = document.createElement("div");
     price.innerHTML = `
-        <div 
-            class="card text-center bg-dark border-0 rounded-4">
-            <div class="card-header text-light pt-5">
-                <h4>
-                    ${prices.exchange}
-                    <span class="fs-1">${prices.price}</span>
-                    <span>/${prices.type}</span>
-                </h4>
-            </div>
+
             <div 
-                class="alert bg-warning rounded-0 fw-bold fs-5 tex" 
-                style="letter-spacing: 3px;"
-            >
-                ${prices.category}
+                class="card text-center bg-dark border-0 rounded-4">
+                <div class="card-header text-light pt-5">
+                    <h4>
+                        ${prices.exchange}
+                        <span class="fs-1">${prices.price}</span>
+                        <span>/${prices.type}</span>
+                    </h4>
+                </div>
+                <div 
+                    class="alert bg-warning rounded-0 fw-bold fs-5 tex" 
+                    style="letter-spacing: 3px;"
+                >
+                    ${prices.category}
+                </div>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item bg-transparent text-light my-2 border-bottom" >
+                            ${prices.description[1]}       
+                        </li> 
+                        <li class="list-group-item bg-transparent text-light my-2 border-bottom" >
+                            ${prices.description[2]}      
+                        </li>
+                        <li class="list-group-item bg-transparent text-light my-2 border-bottom" >
+                            ${prices.description[3]}     
+                        </li>
+                        <li class="list-group-item bg-transparent text-light my-2 border-bottom" >
+                            ${prices.description[4]}      
+                        </li>  
+                        <li class="list-group-item bg-transparent text-light my-2 border-bottom" >
+                            ${prices.description[0]}      
+                        </li>     
+                    </ul>
+                </div>
             </div>
-            <div class="card-body">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item bg-transparent text-light my-2 border-bottom" >
-                        ${prices.description}       
-                    </li>      
-                </ul>
-            </div>
-        </div>
+        
     `;
     pricePlan.appendChild(price);
     // console.log(price);
@@ -234,6 +252,7 @@ seeMoreAbout.addEventListener("click", seeMoreAboutPara);
 aboutImgs.addEventListener("click", aboutImages);
 
 console.log(dataAboutimages);
-// console.log(priceCards)
-// console.log(priceCards[1].type);
+console.log(priceCards)
+console.log(priceCards[1].type);
+console.log(priceCards[1].description[0]);
 
