@@ -3,7 +3,7 @@ const seeMoreAbout = document.querySelector(".seeMorePara");
 const aboutPara = document.querySelector(".aboutPara2");
 const aboutImgs = document.querySelector(".aboutImg");
 const serviceColoumn = document.querySelector("#service-right-coloumn");
-const pricePlan = document.querySelector(".price-plan");
+const pricePlan = document.querySelector("#pricePlan");
 
 const screenLogX = window.innerWidth;
 let currentIndex = 0;
@@ -200,9 +200,9 @@ priceCards.forEach((prices) => {
     // pricePlan.innerHTML = `${prices.type}`;
     const price = document.createElement("div");
     price.innerHTML = `
-
+        <div class="col-md-4 test12">
             <div 
-                class="card text-center bg-dark border-0 rounded-4">
+                class="card text-center bg-dark border-0 rounded-4 price-plan-one">
                 <div class="card-header text-light pt-5">
                     <h4>
                         ${prices.exchange}
@@ -236,7 +236,7 @@ priceCards.forEach((prices) => {
                     </ul>
                 </div>
             </div>
-        
+        </div>
     `;
     pricePlan.appendChild(price);
     // console.log(price);
