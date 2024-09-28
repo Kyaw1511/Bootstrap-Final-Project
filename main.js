@@ -86,47 +86,47 @@ const priceCards = [
             
         ]
     },
-    // {
-    //     exchange: "$",
-    //     price : "65",
-    //     type: "6-month",
-    //     category: "6 month plan Trainning",
-    //     description: [
-    //         "Lorem ipsum dolor sit amet.",
-    //         "Lorem ipsum dolor sit amet.",
-    //         "Lorem ipsum dolor sit amet.",
-    //         "Lorem ipsum dolor sit amet.",
-    //         "Lorem ipsum dolor sit amet.",
+    {
+        exchange: "$",
+        price : "65",
+        type: "6-month",
+        category: "6 month plan Trainning",
+        description: [
+            "Lorem ipsum dolor sit amet.",
+            "Lorem ipsum dolor sit amet.",
+            "Lorem ipsum dolor sit amet.",
+            "Lorem ipsum dolor sit amet.",
+            "Lorem ipsum dolor sit amet.",
             
-    //     ]
-    // },
-    // {
-    //     exchange: "$",
-    //     price : "120",
-    //     type: "day",
-    //     category: "1 year plan Trainning",
-    //     description: [
-    //         "Lorem ipsum dolor sit amet.",
-    //         "Lorem ipsum dolor sit amet.",
-    //         "Lorem ipsum dolor sit amet.",
-    //         "Lorem ipsum dolor sit amet.",
-    //         "Lorem ipsum dolor sit amet.",
+        ]
+    },
+    {
+        exchange: "$",
+        price : "120",
+        type: "day",
+        category: "1 year plan Trainning",
+        description: [
+            "Lorem ipsum dolor sit amet.",
+            "Lorem ipsum dolor sit amet.",
+            "Lorem ipsum dolor sit amet.",
+            "Lorem ipsum dolor sit amet.",
+            "Lorem ipsum dolor sit amet.",
             
-    //     ]
-    // },
-    // {
-    //     exchange: "$",
-    //     price : "160",
-    //     type: "day",
-    //     category: "1.6 year Trainning",
-    //     description: [
-    //        "Lorem ipsum dolor sit amet.",
-    //         "Lorem ipsum dolor sit amet.",
-    //         "Lorem ipsum dolor sit amet.",
-    //         "Lorem ipsum dolor sit amet.",
-    //         "Lorem ipsum dolor sit amet.",
-    //     ]
-    // },
+        ]
+    },
+    {
+        exchange: "$",
+        price : "160",
+        type: "day",
+        category: "1.6 year Trainning",
+        description: [
+           "Lorem ipsum dolor sit amet.",
+            "Lorem ipsum dolor sit amet.",
+            "Lorem ipsum dolor sit amet.",
+            "Lorem ipsum dolor sit amet.",
+            "Lorem ipsum dolor sit amet.",
+        ]
+    },
 ]
 
 
@@ -162,7 +162,7 @@ offerCategories.forEach((item) => {
     service.innerHTML = `
         <div 
             id="service-right"
-            class="card service-card overflow-hidden bg-transparent p-2 list-group-flush" 
+            class="card service-card carousel-item overflow-hidden bg-transparent p-2 list-group-flush" 
             style="border: none;"
         >
             <div 
