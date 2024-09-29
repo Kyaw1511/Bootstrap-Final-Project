@@ -162,7 +162,7 @@ offerCategories.forEach((item) => {
     service.innerHTML = `
         <div 
             id="service-right"
-            class="card service-card carousel-item overflow-hidden bg-transparent p-2 list-group-flush" 
+            class="card service-card bg-transparent p-2 list-group-flush" 
             style="border: none;"
         >
             <div 
