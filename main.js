@@ -239,8 +239,21 @@ priceCards.forEach((prices) => {
         </div>
     `;
     pricePlan.appendChild(price);
+
     // console.log(price);
 })
+
+// test next code 
+const test = document.querySelectorAll('.test');
+let testNext = 0;
+document.getElementById('nextButton').addEventListener("click", function(){
+    test[testNext].classList.remove('active');
+    testNext = (testNext + 1) % test.length;
+    test[testNext].classList.add('active');
+} )
+
+// test next code for another one
+
 
 
 // serviceColoumn.style.border = "2px solid green";
