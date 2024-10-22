@@ -200,6 +200,7 @@ priceCards.forEach((prices) => {
     // pricePlan.innerHTML = `${prices.type}`;
     const price = document.createElement("div");
     price.innerHTML = `
+    
         <div class="col-md-4 test12">
             <div 
                 class="card text-center bg-dark border-0 rounded-4 price-plan-one">
@@ -237,6 +238,7 @@ priceCards.forEach((prices) => {
                 </div>
             </div>
         </div>
+    
     `;
     pricePlan.appendChild(price);
 
@@ -244,13 +246,13 @@ priceCards.forEach((prices) => {
 })
 
 // test next code 
-const test = document.querySelectorAll('.test');
-let testNext = 0;
-document.getElementById('nextButton').addEventListener("click", function(){
-    test[testNext].classList.remove('active');
-    testNext = (testNext + 1) % test.length;
-    test[testNext].classList.add('active');
-} )
+// const test = document.querySelectorAll('.test');
+// let testNext = 0;
+// document.getElementById('nextButton').addEventListener("click", function(){
+//     test[testNext].classList.remove('active');
+//     testNext = (testNext + 1) % test.length;
+//     test[testNext].classList.add('active');
+// } )
 
 // test next code for another one
 
