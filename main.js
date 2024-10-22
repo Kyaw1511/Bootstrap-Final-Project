@@ -243,6 +243,29 @@ priceCards.forEach((prices) => {
     pricePlan.appendChild(price);
 
     // console.log(price);
+
+    let slideIndex = 0;
+    showSlide(slideIndex);
+
+    function nextSlide () {
+        showSlide(slideIndex += 1);
+    }
+    function prevSlide () {
+        showSlide(slideIndex -= 1)
+    }
+
+    function showSlide (x) {
+        if( x >= pricePlan.length ){
+            slideIndex = 0;
+        }
+        if( x < 0 ) {
+            slideIndex = pricePlan.length - 1;
+        }
+        for (let i = 0; i < pricePlan.length; i++) {
+            pricePlan[i].style.display = "none";
+        }
+        pricePlan[slideIndex].style.display = "block";
+    }
 })
 
 // test next code 
