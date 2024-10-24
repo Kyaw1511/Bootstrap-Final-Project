@@ -241,45 +241,41 @@ priceCards.forEach((prices) => {
     
     `;
     pricePlan.appendChild(price);
-
-    // console.log(price);
-
+    
     let slideIndex = 0;
-    showSlide(slideIndex);
+    showSlides(slideIndex);
 
-    function nextSlide () {
-        showSlide(slideIndex += 1);
-    }
-    function prevSlide () {
-        showSlide(slideIndex -= 1)
+    // Function to go to the next slide;
+    function nextSlide() {
+        showSlides(slideIndex += 1);
     }
 
-    function showSlide (x) {
-        if( x >= pricePlan.length ){
-            slideIndex = 0;
-        }
-        if( x < 0 ) {
-            slideIndex = pricePlan.length - 1;
-        }
-        for (let i = 0; i < pricePlan.length; i++) {
-            pricePlan[i].style.display = "none";
-        }
-        pricePlan[slideIndex].style.display = "block";
+    // Function to go to the previous slide;
+    function prevSlide() {
+        showSlides(slideIndex -= 1);
     }
+
+    // main function show slide;
+    function showSlides(n) {
+        let slides = document.getElementsByClassName("carousel-image");
+      
+        if (n >= slides.length) { 
+          slideIndex = 0; // Loop back to the first image
+        }
+        if (n < 0) { 
+          slideIndex = slides.length - 1; // Go to the last image
+        }
+      
+        for (let i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none"; // Hide all images
+        }
+      
+        slides[slideIndex].style.display = "block"; // Show the current image
+      }
+
+    console.log(price);
+
 })
-
-// test next code 
-// const test = document.querySelectorAll('.test');
-// let testNext = 0;
-// document.getElementById('nextButton').addEventListener("click", function(){
-//     test[testNext].classList.remove('active');
-//     testNext = (testNext + 1) % test.length;
-//     test[testNext].classList.add('active');
-// } )
-
-// test next code for another one
-
-
 
 // serviceColoumn.style.border = "2px solid green";
 serviceColoumn.style.height = "536px";
