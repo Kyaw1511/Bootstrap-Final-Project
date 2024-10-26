@@ -242,38 +242,7 @@ priceCards.forEach((prices) => {
     `;
     pricePlan.appendChild(price);
     
-    let slideIndex = 0;
-    showSlides(slideIndex);
-
-    // Function to go to the next slide;
-    function nextSlide() {
-        showSlides(slideIndex += 1);
-    }
-
-    // Function to go to the previous slide;
-    function prevSlide() {
-        showSlides(slideIndex -= 1);
-    }
-
-    // main function show slide;
-    function showSlides(n) {
-        let slides = document.getElementsByClassName("carousel-image");
-      
-        if (n >= slides.length) { 
-          slideIndex = 0; // Loop back to the first image
-        }
-        if (n < 0) { 
-          slideIndex = slides.length - 1; // Go to the last image
-        }
-      
-        for (let i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none"; // Hide all images
-        }
-      
-        slides[slideIndex].style.display = "block"; // Show the current image
-      }
-
-    console.log(price);
+    // console.log(price);
 
 })
 
