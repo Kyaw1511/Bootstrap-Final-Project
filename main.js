@@ -196,55 +196,55 @@ offerCategories.forEach((item) => {
 })
 
 // pricing table
-priceCards.forEach((prices) => {
-    // pricePlan.innerHTML = `${prices.type}`;
-    const price = document.createElement("div");
-    price.innerHTML = `
-    
-        <div class="col-md-4 test12">
-            <div 
-                class="card text-center bg-dark border-0 rounded-4 price-plan-one">
-                <div class="card-header text-light pt-5">
-                    <h4>
-                        ${prices.exchange}
-                        <span class="fs-1">${prices.price}</span>
-                        <span>/${prices.type}</span>
-                    </h4>
-                </div>
+    priceCards.forEach((prices) => {
+        // pricePlan.innerHTML = `${prices.type}`;
+        const price = document.createElement("div");
+        price.innerHTML = `
+        
+            <div class="col-md-4 test12">
                 <div 
-                    class="alert bg-warning rounded-0 fw-bold fs-5 tex" 
-                    style="letter-spacing: 3px;"
-                >
-                    ${prices.category}
-                </div>
-                <div class="card-body">
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item bg-transparent text-light my-2 border-bottom" >
-                            ${prices.description[1]}       
-                        </li> 
-                        <li class="list-group-item bg-transparent text-light my-2 border-bottom" >
-                            ${prices.description[2]}      
-                        </li>
-                        <li class="list-group-item bg-transparent text-light my-2 border-bottom" >
-                            ${prices.description[3]}     
-                        </li>
-                        <li class="list-group-item bg-transparent text-light my-2 border-bottom" >
-                            ${prices.description[4]}      
-                        </li>  
-                        <li class="list-group-item bg-transparent text-light my-2 border-bottom" >
-                            ${prices.description[0]}      
-                        </li>     
-                    </ul>
+                    class="card text-center bg-dark border-0 rounded-4 price-plan-one">
+                    <div class="card-header text-light pt-5">
+                        <h4>
+                            ${prices.exchange}
+                            <span class="fs-1">${prices.price}</span>
+                            <span>/${prices.type}</span>
+                        </h4>
+                    </div>
+                    <div 
+                        class="alert bg-warning rounded-0 fw-bold fs-5 tex" 
+                        style="letter-spacing: 3px;"
+                    >
+                        ${prices.category}
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item bg-transparent text-light my-2 border-bottom" >
+                                ${prices.description[1]}       
+                            </li> 
+                            <li class="list-group-item bg-transparent text-light my-2 border-bottom" >
+                                ${prices.description[2]}      
+                            </li>
+                            <li class="list-group-item bg-transparent text-light my-2 border-bottom" >
+                                ${prices.description[3]}     
+                            </li>
+                            <li class="list-group-item bg-transparent text-light my-2 border-bottom" >
+                                ${prices.description[4]}      
+                            </li>  
+                            <li class="list-group-item bg-transparent text-light my-2 border-bottom" >
+                                ${prices.description[0]}      
+                            </li>     
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
+        
+        `;
+        pricePlan.appendChild(price);
+        
+        // console.log(price);
     
-    `;
-    pricePlan.appendChild(price);
-    
-    // console.log(price);
-
-})
+    })
 
 // serviceColoumn.style.border = "2px solid green";
 serviceColoumn.style.height = "536px";
